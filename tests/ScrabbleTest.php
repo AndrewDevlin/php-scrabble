@@ -68,5 +68,16 @@
             //Assert
             $this->assertEquals(25, $result);
         }
+
+        function test_scrabbleScore_eightPoints()
+        {
+            //Arrange
+            $new_scrabble = new Scrabble;
+            $input = 'jabberwock';
+            //Act
+            $result = $new_scrabble->scrabbleScore($input);
+            //Assert
+            $this->assertEquals(30, $result);
+        }
     }
 ?>

@@ -24,5 +24,16 @@
             //Assert
             $this->assertEquals(2, $result);
         }
+
+        function test_scrabbleScore_twoPoints()
+        {
+            //Arrange
+            $new_scrabble = new Scrabble;
+            $input = 'doll';
+            //Act
+            $result = $new_scrabble->scrabbleScore($input);
+            //Assert
+            $this->assertEquals(5, $result);
+        }
     }
 ?>

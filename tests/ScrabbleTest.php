@@ -35,5 +35,16 @@
             //Assert
             $this->assertEquals(5, $result);
         }
+
+        function test_scrabbleScore_threePoints()
+        {
+            //Arrange
+            $new_scrabble = new Scrabble;
+            $input = 'mange';
+            //Act
+            $result = $new_scrabble->scrabbleScore($input);
+            //Assert
+            $this->assertEquals(8, $result);
+        }
     }
 ?>

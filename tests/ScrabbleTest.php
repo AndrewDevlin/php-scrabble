@@ -57,5 +57,16 @@
             //Assert
             $this->assertEquals(19, $result);
         }
+
+        function test_scrabbleScore_fivePoints()
+        {
+            //Arrange
+            $new_scrabble = new Scrabble;
+            $input = 'kamagraphy';
+            //Act
+            $result = $new_scrabble->scrabbleScore($input);
+            //Assert
+            $this->assertEquals(25, $result);
+        }
     }
 ?>

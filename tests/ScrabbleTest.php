@@ -79,5 +79,15 @@
             //Assert
             $this->assertEquals(30, $result);
         }
+        function test_scrabbleScore_tenPoints()
+        {
+            //Arrange
+            $new_scrabble = new Scrabble;
+            $input = 'qjkfbda';
+            //Act
+            $result = $new_scrabble->scrabbleScore($input);
+            //Assert
+            $this->assertEquals(33, $result);
+        }
     }
 ?>

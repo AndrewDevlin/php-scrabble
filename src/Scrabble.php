@@ -9,6 +9,7 @@
             $four_points = array('f','h','v','w','y');
             $five_points = 'k';
             $eight_points = array('j','x');
+            $ten_points = array('q','z');
             $input_letters = str_split(strtolower($input));
             $score = 0;
             foreach ($input_letters as $input_letter) {
@@ -38,6 +39,11 @@
                 foreach ($eight_points as $eight_point) {
                     if($input_letter == $eight_point) {
                         $score += 8;
+                    }
+                }
+                foreach ($ten_points as $ten_point) {
+                    if($input_letter == $ten_point) {
+                        $score += 10;
                     }
                 }
             }

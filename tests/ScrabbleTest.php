@@ -46,5 +46,16 @@
             //Assert
             $this->assertEquals(8, $result);
         }
+
+        function test_scrabbleScore_fourPoints()
+        {
+            //Arrange
+            $new_scrabble = new Scrabble;
+            $input = 'ambiguously';
+            //Act
+            $result = $new_scrabble->scrabbleScore($input);
+            //Assert
+            $this->assertEquals(19, $result);
+        }
     }
 ?>

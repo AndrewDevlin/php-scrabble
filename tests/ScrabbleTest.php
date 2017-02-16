@@ -79,6 +79,7 @@
             //Assert
             $this->assertEquals(30, $result);
         }
+        
         function test_scrabbleScore_tenPoints()
         {
             //Arrange

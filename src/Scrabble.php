@@ -3,6 +3,33 @@
     {
         function scrabbleScore($input)
         {
+            $letters_points = array(
+                1 => array('a','e','i','o','u','l','n','r','s','t'),
+                2 => array('d','g'),
+                3 => array('b', 'c', 'm', 'p'),
+                4 => array('f','h','v','w','y'),
+                5 => array('k'),
+                8 => array('j','x'),
+                10 => array('q','z')
+            );
+
+            $score = 0;
+            $input_letters = str_split(strtolower($input));
+
+            foreach ($input_letters as $input_letter) {
+                foreach ($letters_points as $points => $point_characters) {
+                    foreach ($point_characters as $point_character) {
+                        if ($input_letter == $point_character) {
+                            $score += $points;
+                        }
+                    }
+                }
+            }
+            return $score;
+        }
+
+        function scrabbleScoreNotFactored($input)
+        {
             $one_points = array('a','e','i','o','u','l','n','r','s','t');
             $two_points = array('d','g');
             $three_points = array('b', 'c', 'm', 'p');

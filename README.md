@@ -47,11 +47,25 @@ This project takes in a word and outputs its Scrabble score.
 
 * Behavior given a string, returns true or false.
 
+* Scrabble letter values:
+  A, E, I, O, U, L, N, R, S, T       1
+  D, G                               2
+  B, C, M, P                         3
+  F, H, V, W, Y                      4
+  K                                  5
+  J, X                               8
+  Q, Z                               10
+
 | String              | Result             |
 |--------------|----------------------------|
-| bob          |     true            |                                     
-| mike         |     false           |  
-| Bob          |     true |                                   
+| no         |     2|                                     
+| No         |     2|  
+| doll       |     5|
+| mange      |     8|
+| ambiguously|    19|
+| kamagraphy |    25|
+| jabberwock |    30|
+| qjkfbda    |    33|
 
 * Phase 4 - Initial Silex framework with "Hello" on home page
 * Phase 4a- Add Silex and Twig dependencies (composer.json and updated composer.lock)
